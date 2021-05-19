@@ -22,7 +22,6 @@ long int getlen(long int input)
 	}
 
 	return length;
-	
 }
 
 char *stringify(long int input)
@@ -81,7 +80,7 @@ char *compute(char *input)
 		if (!y)
 			return y;
 		length = strlen(y);
-		
+
 		ret = malloc((2*length + 2)*sizeof(char));
 		if (!ret)
 			return NULL;
@@ -91,7 +90,6 @@ char *compute(char *input)
 		free(y);
 		return ret;
 	}
-
 
 	if (input[0] == '2') {
 		char *next_input = &input[1];
@@ -131,7 +129,7 @@ void compute_generations(unsigned long val)
 
 		if (repeats || too_long || generation >= MAX_DESCENDENTS)
 			break;
-		
+
 		cur = compute(cur);
 	} while (cur != NULL);
 
